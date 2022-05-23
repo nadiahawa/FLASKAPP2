@@ -1,0 +1,24 @@
+{% extends 'components/layout.html' %}
+
+{% block content %}
+
+<h1>Different Pokemons!</h1>
+
+{% block header %}
+<h1> Pokemon API </h1>
+{% endblock header %}
+
+
+<table>
+    <h1>Pokemons</h1>
+
+    <tr>
+      <th>Names</th>
+      <th>Url</th>
+    </tr>
+    <tr>
+      <td>{{ name }}</td>
+    </tr>
+  </table>
+
+{% endblock content %}

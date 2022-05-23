@@ -1,0 +1,30 @@
+{% extends 'components/layout.html' %}
+
+{% block header %}
+<h1> Pokemon API </h1>
+{% endblock header %}
+
+{% block content %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Abilities</th>
+      <th scope="col">Weight</th>
+      <th scope="col">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for n in name %}
+      {% for a in abilities%}
+    <tr>
+      <td class="table-danger">{{ n }}</td>
+      <td>{{a}}</td>
+      <td class="table-danger">{{final_weight}}</td>
+      <td>{{types}}</td>
+    </tr>
+     {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
