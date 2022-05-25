@@ -4,6 +4,7 @@ import requests as r
 import os
 from .services import getallpokes
 from .services import morepokedata
+from flask_login import login_required
 
 @app.route('/')
 def home():
@@ -17,7 +18,7 @@ def pokeshow():
     return render_template('pokedex.html')
 
 
-@app.route('/pokemons')
+@app.route('/pokemons', methods = ['GET'])
 def allpokes():
     context = getallpokes()
     attributes = morepokedata()
